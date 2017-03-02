@@ -40,6 +40,8 @@ class StacksDemo {
 		//plik StackFIFO.java 10-11 i 15-16 wiersz
 		//plik StackHanoi.java 5, 8, 12-15 wiersz
 		//plik IstacksFactory 9-12 wiersz
+		//alt + ← oraz alt + → powoduje przeskoczenie pomiędzy ostatnio edytowanymi plikami do lokalizacji gdzie wykonywana była ostatnia zmiana.
+		//Strzałka w lewo cofa się w historii, strzałka w prawo idzie do przodu.
 		
 	}
 	
