@@ -2,21 +2,20 @@ package edu.kis.vh.stacks.list;
 
 public class StackList {
 
-	Node last;
-	int i;
+	Node lastNode;
 
-	public void pushElement(int i) {
-		if (last == null)
-			last = new Node(i);
+	public void pushElement(int nodeNumber) {
+		if (lastNode == null)
+			lastNode = new Node(nodeNumber);
 		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
+			lastNode.nextValue = new Node(nodeNumber);
+			lastNode.nextValue.previousValue = lastNode;
+			lastNode = lastNode.nextValue;
 		}
 	}
 
 	public boolean empty() {
-		return last == null;
+		return lastNode == null;
 	}
 
 	public boolean full() {
@@ -26,15 +25,15 @@ public class StackList {
 	public int peek() {
 		if (empty())
 			return -1;
-		return last.value;
+		return lastNode.value;
 	}
 
 	public int pop() {
 		if (empty())
 			return -1;
-		int ret = last.value;
-		last = last.prev;
-		return ret;
+		int topValue = lastNode.value;
+		lastNode = lastNode.previousValue;
+		return topValue;
 	}
 
 }
