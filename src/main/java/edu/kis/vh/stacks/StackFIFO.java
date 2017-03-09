@@ -1,21 +1,36 @@
 package edu.kis.vh.stacks;
 
-public class StackFIFO extends stack {
+/**
+ * Jest to klasa dla stosu FIFO.
+ * @author Jakub
+ *
+ */
+public class StackFIFO extends Stack {
 
-	public stack temp = new stack();
+	private Stack temp = new Stack(); //po enkapsulacji dodanie gettera i settera po enkapsulacji
 	
+	/**
+	 * @return tymczasowa wartość temp
+	 */
+	public Stack getTemp() {
+		return temp;
+	}
+
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.Stack#pop()
+	 */
 	@Override
 	public int pop() {
 		while (!isEmpty())
+			temp.push(super.pop());
 		
-		temp.push(super.pop());
-		
-		int ret = temp.pop();
+		int topValue = temp.pop();
 		
 		while (!temp.isEmpty())
-	
-		push(temp.pop());
+			push(temp.pop());
 		
-		return ret;
+		return topValue;
 	}
+	
+	
 }
