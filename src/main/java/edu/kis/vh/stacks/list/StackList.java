@@ -9,8 +9,8 @@ public class StackList {
 		if (lastNode == null)
 			lastNode = new Node(nodeNumber);
 		else {
-			lastNode.setNextValue(new Node(nodeNumber));
-			lastNode.getNextValue().setPreviousValue(lastNode);
+			lastNode.setNextValue(new Node(nodeNumber)); //automatycznie zmienione po enkapsulacji atrybutów z klasy Node
+			lastNode.getNextValue().setPreviousValue(lastNode); //automatycznie zmienione po enkapsulacji atrybutów z klasy Node
 			lastNode = lastNode.getNextValue();
 		}
 	}
