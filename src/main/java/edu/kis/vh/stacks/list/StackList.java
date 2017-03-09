@@ -3,6 +3,7 @@ package edu.kis.vh.stacks.list;
 public class StackList {
 
 	Node lastNode;
+	private static final int EMPTY_STACK_INDICATOR = -1;
 
 	public void pushElement(int nodeNumber) {
 		if (lastNode == null)
@@ -24,13 +25,13 @@ public class StackList {
 
 	public int peek() {
 		if (empty())
-			return -1;
+			return EMPTY_STACK_INDICATOR;
 		return lastNode.value;
 	}
 
 	public int pop() {
 		if (empty())
-			return -1;
+			return EMPTY_STACK_INDICATOR;
 		int topValue = lastNode.value;
 		lastNode = lastNode.previousValue;
 		return topValue;

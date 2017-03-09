@@ -2,16 +2,16 @@ package edu.kis.vh.stacks;
 
 public class Stack {
 	
-	final int EMPTY_STACK_INDICATOR = -1;
-	final int FULL_STACK_INDICATOR = 11;
+	private final int EMPTY_STACK_INDICATOR = -1;
+	private final int FULL_STACK_INDICATOR = 11;
 
 	private int[] ITEMS = new int[12];	
 
-	public int total = EMPTY_STACK_INDICATOR;
+	private int total = EMPTY_STACK_INDICATOR;
 	
 	public void push(int i) {
 		if (!isFull())
-		ITEMS[++total] = i;
+			ITEMS[++total] = i;
 	}
 	
 	public boolean isEmpty() {
