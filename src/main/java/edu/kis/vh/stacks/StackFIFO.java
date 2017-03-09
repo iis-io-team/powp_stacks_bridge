@@ -17,11 +17,4 @@ public class StackFIFO extends Stack {
 		return topValue;
 	}
 
-	private Stack getTemp() {
-		return temp;
-	}
-
-	private void setTemp(Stack temp) {
-		this.temp = temp;
-	}
 }
