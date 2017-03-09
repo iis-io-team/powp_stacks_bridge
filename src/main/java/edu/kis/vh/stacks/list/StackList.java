@@ -2,9 +2,8 @@ package edu.kis.vh.stacks.list;
 
 public class StackList {
 
-	Node last;
-	int i;
-
+	private Node last;
+	
 	public void pushElement(int i) {
 		if (last == null)
 			last = new Node(i);
