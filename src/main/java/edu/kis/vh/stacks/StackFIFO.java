@@ -2,7 +2,7 @@ package edu.kis.vh.stacks;
 
 public class StackFIFO extends Stack {
 
-	private Stack temp = new Stack();
+	private Stack temp = new Stack(); //po enkapsulacji dodanie gettera i settera po enkapsulacji
 	
 	@Override
 	public int pop() {
@@ -15,5 +15,13 @@ public class StackFIFO extends Stack {
 			push(temp.pop());
 		
 		return topValue;
+	}
+
+	private Stack getTemp() {
+		return temp;
+	}
+
+	private void setTemp(Stack temp) {
+		this.temp = temp;
 	}
 }

@@ -2,16 +2,16 @@ package edu.kis.vh.stacks.list;
 
 public class StackList {
 
-	Node lastNode;
+	private Node lastNode; //po enkapsulacji modyfikator zmienił się na prywatny i dodano getter i setter
 	private static final int EMPTY_STACK_INDICATOR = -1;
 
 	public void pushElement(int nodeNumber) {
 		if (lastNode == null)
 			lastNode = new Node(nodeNumber);
 		else {
-			lastNode.nextValue = new Node(nodeNumber);
-			lastNode.nextValue.previousValue = lastNode;
-			lastNode = lastNode.nextValue;
+			lastNode.setNextValue(new Node(nodeNumber));
+			lastNode.getNextValue().setPreviousValue(lastNode);
+			lastNode = lastNode.getNextValue();
 		}
 	}
 
@@ -26,15 +26,23 @@ public class StackList {
 	public int peek() {
 		if (empty())
 			return EMPTY_STACK_INDICATOR;
-		return lastNode.value;
+		return lastNode.getValue();
 	}
 
 	public int pop() {
 		if (empty())
 			return EMPTY_STACK_INDICATOR;
-		int topValue = lastNode.value;
-		lastNode = lastNode.previousValue;
+		int topValue = lastNode.getValue();
+		lastNode = lastNode.getPreviousValue();
 		return topValue;
+	}
+
+	Node getLastNode() {
+		return lastNode;
+	}
+
+	void setLastNode(Node lastNode) {
+		this.lastNode = lastNode;
 	}
 
 }
