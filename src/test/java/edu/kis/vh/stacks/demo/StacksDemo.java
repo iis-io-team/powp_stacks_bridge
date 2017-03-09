@@ -9,6 +9,23 @@ class StacksDemo {
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 		
+		testStacks(factory);
+		
+		//plik StacksDemo.java:
+		//linia 32 z System.out.println, zamiast 2 wierszy w jednym
+		// linia 12 z stack[], zamiast 2 wierszy w jednym
+		//wiersze 15-19 klamry od for
+		//wiersze 21-30 klamry od pętli i wcięcia
+		//plik stack.java od 14 do 32 wiersza
+		//plik StackFIFO.java 10-11 i 15-16 wiersz
+		//plik StackHanoi.java 5, 8, 12-15 wiersz
+		//plik IstacksFactory 9-12 wiersz
+		//alt + ← oraz alt + → powoduje przeskoczenie pomiędzy ostatnio edytowanymi plikami do lokalizacji gdzie wykonywana była ostatnia zmiana.
+		//Strzałka w lewo cofa się w historii, strzałka w prawo idzie do przodu.
+		
+	}
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFIFOStack(), factory.getHanoiStack()};
 		
 		for (int i = 1; i < 15; i++) {
@@ -30,19 +47,6 @@ class StacksDemo {
 		}
 		
 		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
-		
-		//plik StacksDemo.java:
-		//linia 32 z System.out.println, zamiast 2 wierszy w jednym
-		// linia 12 z stack[], zamiast 2 wierszy w jednym
-		//wiersze 15-19 klamry od for
-		//wiersze 21-30 klamry od pętli i wcięcia
-		//plik stack.java od 14 do 32 wiersza
-		//plik StackFIFO.java 10-11 i 15-16 wiersz
-		//plik StackHanoi.java 5, 8, 12-15 wiersz
-		//plik IstacksFactory 9-12 wiersz
-		//alt + ← oraz alt + → powoduje przeskoczenie pomiędzy ostatnio edytowanymi plikami do lokalizacji gdzie wykonywana była ostatnia zmiana.
-		//Strzałka w lewo cofa się w historii, strzałka w prawo idzie do przodu.
-		
 	}
 	
 }
