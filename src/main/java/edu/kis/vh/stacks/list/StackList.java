@@ -3,7 +3,7 @@ package edu.kis.vh.stacks.list;
 public class StackList {
 
 	private Node lastNode; //po enkapsulacji modyfikator zmienił się na prywatny i dodano getter i setter
-	private static final int EMPTY_STACK_INDICATOR = -1;
+	private static final int EMPTY_STACK_INDICATOR = -1; //final dodany wcześniej
 
 	public void pushElement(int nodeNumber) {
 		if (lastNode == null)
