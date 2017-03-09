@@ -16,5 +16,6 @@ public class StackFIFO extends Stack {
 		
 		return topValue;
 	}
-
+	
+	
 }

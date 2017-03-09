@@ -8,6 +8,7 @@ public class StackHanoi extends Stack {
 		return totalRejected;
 	}
 
+	@Override
 	public void push(int enteringValue) {
 		if (!isEmpty() && enteringValue > top())
 			totalRejected++;
