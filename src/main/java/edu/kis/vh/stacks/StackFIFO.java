@@ -4,6 +4,10 @@ public class StackFIFO extends Stack {
 
 	private Stack temp = new Stack(); //po enkapsulacji dodanie gettera i settera po enkapsulacji
 	
+	public Stack getTemp() {
+		return temp;
+	}
+
 	@Override
 	public int pop() {
 		while (!isEmpty())
