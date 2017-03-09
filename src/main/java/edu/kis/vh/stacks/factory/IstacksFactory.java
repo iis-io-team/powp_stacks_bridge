@@ -6,12 +6,12 @@ import edu.kis.vh.stacks.StackHanoi;
 
 	public interface IstacksFactory {
 	
-		public stack GetStandardStack();
+		public stack getStandardStack();
 		
-		public stack GetFalseStack();
+		public stack getFalseStack();
 		
-		public StackFIFO GetFIFOStack();
+		public StackFIFO getFIFOStack();
 		
-		public StackHanoi GetHanoiStack();
+		public StackHanoi getHanoiStack();
 		
 	}
