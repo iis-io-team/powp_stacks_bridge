@@ -3,6 +3,7 @@
 ## instrukcje
 
 * powp-lab-kod.pdf - Podstawowe techniki utrzymania wysokiej jakości kodu
+* powp-lab-bridge.pdf - Refaktoryzacja do wzorca bridge
 
 ## ogólne zasady oceny pracy na laboratoriach
 
