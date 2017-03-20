@@ -8,6 +8,7 @@ private int totalRejected = 0;
 	return totalRejected;
 	}
 
+	@Override
 	public void push(int in) {
 	if (!isEmpty() && in > top())
 		totalRejected++;
