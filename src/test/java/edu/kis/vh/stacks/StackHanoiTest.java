@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.*;
 
 public class StackHanoiTest {
 
-    private final int ANY_VALUE = 12;
+    final private int ANY_VALUE = 12;
 
     @Test
     public void shouldPushElement() throws Exception {
