@@ -9,6 +9,13 @@ class StacksDemo {
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
+		testStacks(factory);
+
+	}
+	// 13,19-27 to big intend
+	// alt + arrow move between files
+
+	private static void testStacks(DefaultStacksFactory factory) {
 		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFifoStack(),
 				factory.getHanoiStack() };
 
@@ -27,9 +34,6 @@ class StacksDemo {
 		}
 
 		System.out.println("total rejected is " + ((HanoiStack) stacks[3]).reportRejected());
-
 	}
-	// 13,19-27 to big intend
-	// alt + arrow move between files
 
 }
