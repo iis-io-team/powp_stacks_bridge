@@ -6,7 +6,7 @@ public class Stack {
 
 	private static final int MIN = -1;
 
-	private int[] items = new int[STACK_SIZE];
+	private final int[] items = new int[STACK_SIZE];
 
 	private int total = MIN;
 
