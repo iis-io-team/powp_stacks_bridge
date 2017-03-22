@@ -1,5 +1,9 @@
 package edu.kis.vh.stacks.list;
 
+/**
+ * @author Sebastian
+ * stack list def
+ */
 public class StackList {
 	
 	private class Node {

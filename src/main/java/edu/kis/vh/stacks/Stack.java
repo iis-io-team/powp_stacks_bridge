@@ -1,5 +1,9 @@
 package edu.kis.vh.stacks;
 
+/**
+ * @author Sebastian
+ * basic stack def
+ */
 public class Stack {
 
 	private static final int STACK_SIZE = 12;

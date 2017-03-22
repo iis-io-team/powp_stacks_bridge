@@ -4,6 +4,10 @@ import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.FifoStack;
 import edu.kis.vh.stacks.HanoiStack;
 
+/**
+ * @author Sebastian
+ *Stack factory interface
+ */
 public interface IStacksFactory {
 
 	public Stack getStandardStack();

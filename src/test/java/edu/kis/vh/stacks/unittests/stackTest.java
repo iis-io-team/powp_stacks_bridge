@@ -5,6 +5,10 @@ import org.junit.Test;
 
 import edu.kis.vh.stacks.Stack;
 
+/**
+ * @author Sebastian
+ *junit test for stack
+ */
 public class stackTest {
 
 	@Test

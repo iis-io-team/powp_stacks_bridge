@@ -4,6 +4,10 @@ import edu.kis.vh.stacks.HanoiStack;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
+/**
+ * @author Sebastian
+ *Testing stacks
+ */
 class StacksDemo {
 
 	public static void main(String[] args) {
