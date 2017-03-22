@@ -1,17 +1,56 @@
 package edu.kis.vh.stacks.list;
 
+/**
+ * @author Sebastian
+ * stack list def
+ */
 public class StackList {
+	
+	private class Node {
+		//using getters and setters in StackList to get and set fields
+			private int value;
+			private Node prev;
+			private Node next;
 
-	Node last;
+			public Node(int i) {
+				value = i;
+			}
+
+			protected Node getNext() {
+				return next;
+			}
+
+			protected void setNext(Node next) {
+				this.next = next;
+			}
+
+			protected Node getPrev() {
+				return prev;
+			}
+
+			protected void setPrev(Node prev) {
+				this.prev = prev;
+			}
+
+			protected int getValue() {
+				return value;
+			}
+
+
+		}
+
+
+	private static final int STACK_EMPTY = -1;
+	private Node last;
 	int i;
 
 	public void pushElement(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
-			last.next = new Node(i);
-			last.next.prev = last;
-			last = last.next;
+			last.setNext(new Node(i));
+			last.getNext().setPrev(last);
+			last = last.getNext();
 		}
 	}
 
@@ -25,15 +64,15 @@ public class StackList {
 
 	public int peek() {
 		if (empty())
-			return -1;
-		return last.value;
+			return STACK_EMPTY;
+		return last.getValue();
 	}
 
 	public int pop() {
 		if (empty())
-			return -1;
-		int ret = last.value;
-		last = last.prev;
+			return STACK_EMPTY;
+		int ret = last.getValue();
+		last = last.getPrev();
 		return ret;
 	}
 
