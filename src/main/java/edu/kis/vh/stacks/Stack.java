@@ -8,7 +8,7 @@ public class Stack {
 
 	private int[] items = new int[STACK_SIZE];
 
-	public int total = MIN;
+	private int total = MIN;
 
 	public void push(int i) {
 		if (!isFull())

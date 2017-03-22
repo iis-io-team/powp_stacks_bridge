@@ -1,7 +1,7 @@
 package edu.kis.vh.stacks.demo;
 
-import edu.kis.vh.stacks.StackHanoi;
-import edu.kis.vh.stacks.stack;
+import edu.kis.vh.stacks.HanoiStack;
+import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
@@ -9,8 +9,8 @@ class StacksDemo {
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
-		stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
-				factory.GetHanoiStack() };
+		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFifoStack(),
+				factory.getHanoiStack() };
 
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)
@@ -26,10 +26,10 @@ class StacksDemo {
 			System.out.println();
 		}
 
-		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+		System.out.println("total rejected is " + ((HanoiStack) stacks[3]).reportRejected());
 
 	}
-//	13,19-27 to big intend
-//	alt + arrow move between files
+	// 13,19-27 to big intend
+	// alt + arrow move between files
 
 }
