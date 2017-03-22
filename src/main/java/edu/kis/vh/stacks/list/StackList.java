@@ -11,7 +11,7 @@ public class StackList {
 			last = new Node(i);
 		else {
 			last.setNext(new Node(i));
-			last.getNext().prev = last;
+			last.getNext().setPrev(last);
 			last = last.getNext();
 		}
 	}
@@ -27,14 +27,14 @@ public class StackList {
 	public int peek() {
 		if (empty())
 			return STACK_EMPTY;
-		return last.value;
+		return last.getValue();
 	}
 
 	public int pop() {
 		if (empty())
 			return STACK_EMPTY;
-		int ret = last.value;
-		last = last.prev;
+		int ret = last.getValue();
+		last = last.getPrev();
 		return ret;
 	}
 

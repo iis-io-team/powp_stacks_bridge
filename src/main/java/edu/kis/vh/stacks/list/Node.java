@@ -2,8 +2,8 @@ package edu.kis.vh.stacks.list;
 
 public class Node {
 //using getters and setters in StackList to get and set fields
-	protected int value;
-	protected Node prev;
+	private int value;
+	private Node prev;
 	private Node next;
 
 	public Node(int i) {
@@ -17,5 +17,18 @@ public class Node {
 	protected void setNext(Node next) {
 		this.next = next;
 	}
+
+	protected Node getPrev() {
+		return prev;
+	}
+
+	protected void setPrev(Node prev) {
+		this.prev = prev;
+	}
+
+	protected int getValue() {
+		return value;
+	}
+
 
 }
