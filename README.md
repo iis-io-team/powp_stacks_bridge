@@ -1,4 +1,4 @@
-#Laboratoria - jakość kodu i wzorzec bridge
+# Laboratoria - jakość kodu i wzorzec bridge
 
 ## instrukcje
 
