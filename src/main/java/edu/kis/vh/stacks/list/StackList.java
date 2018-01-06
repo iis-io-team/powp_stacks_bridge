@@ -4,7 +4,6 @@ public class StackList {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	private Node last;
-	private int i;
 
 	public void pushElement(int i) {
 		if (last == null)

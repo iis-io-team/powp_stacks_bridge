@@ -4,7 +4,7 @@ public class Node {
 
 	// W klasie StackList dostep do ponizszych zmiennych odbywa sie teraz poprzez
 	// gettery i settery, z wyjatkiem value, ktora jest tylko zwracana, nigdy nie modyfikowana.
-	private int value;
+	private final int value;
 	private Node prev;
 	private Node next;
 
