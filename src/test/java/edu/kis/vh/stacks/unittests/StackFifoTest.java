@@ -11,9 +11,7 @@ import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFifo;
 
 public class StackFifoTest {
-
-	private final int STACK_CAPACITY = 12;
-
+	
 	private Stack stackObj = null;
 
 	@Before
@@ -42,7 +40,7 @@ public class StackFifoTest {
 
 	@Test
 	public void testIsFull() {
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		for (int i = 0; i < Stack.DEFAULT_CAPACITY; i++) {
 			boolean result = stackObj.isFull();
 			Assert.assertEquals(false, result);
 			stackObj.push(888);

@@ -7,12 +7,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import edu.kis.vh.stacks.IStack;
+import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackHanoi;
 
 public class StackHanoiTest {
 
-	private final int STACK_CAPACITY = 12;
-	
 	private StackHanoi stackObj = null;
 
 	@Before
@@ -41,7 +40,7 @@ public class StackHanoiTest {
 
 	@Test
 	public void testIsFull() {
-		for (int i = 0; i < STACK_CAPACITY; i++) {
+		for (int i = 0; i < Stack.DEFAULT_CAPACITY; i++) {
 			boolean result = stackObj.isFull();
 			Assert.assertEquals(false, result);
 			stackObj.push(888);
