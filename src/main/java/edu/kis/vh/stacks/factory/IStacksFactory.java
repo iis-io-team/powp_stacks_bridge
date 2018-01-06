@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFifo;
 import edu.kis.vh.stacks.StackHanoi;
 
-interface IStacksFactory {
+public interface IStacksFactory {
 
 	public Stack getStandardStack();
 
