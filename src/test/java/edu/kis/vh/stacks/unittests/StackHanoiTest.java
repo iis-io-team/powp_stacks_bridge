@@ -6,17 +6,17 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import edu.kis.vh.stacks.Stack;
+import edu.kis.vh.stacks.StackHanoi;
 
-public class StackTest {
+public class StackHanoiTest {
 
 	private static final int STACK_CAPACITY = 12;
-
-	private Stack stackObj = null;
+	
+	private StackHanoi stackObj = null;
 
 	@Before
 	public void setUp() {
-		stackObj = new Stack(STACK_CAPACITY);
+		stackObj = new StackHanoi(STACK_CAPACITY);
 	}
 
 	@Test
@@ -38,11 +38,9 @@ public class StackTest {
 		Assert.assertFalse(stackObj.isFull());
 	}
 
-	// Nie jestesmy w statnie poprawnie ocenic pojemnosc stosu (a co za tym idzie
-	// sprawdzic czy stos jest jest pelny) nie podajac wartosci
-	// jako argument do konstruktora.
 	@Test
 	public void testIsFull() {
+		final int STACK_CAPACITY = 12;
 		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();
 			Assert.assertEquals(false, result);
@@ -69,29 +67,12 @@ public class StackTest {
 
 	@Test
 	public void testPop() {
-		final int EMPTY_STACK_VALUE = -1;
-
-		int result = stackObj.pop();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
-
-		int testValue = 4;
-		stackObj.push(testValue);
-
-		result = stackObj.pop();
-		Assert.assertEquals(testValue, result);
-		result = stackObj.pop();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
-	}
-
-	@Test
-	public void testMultiPop() {
 		int firstValue = 1;
 		int secondValue = 2;
 		stackObj.push(firstValue);
 		stackObj.push(secondValue);
 
-		assertEquals(secondValue, stackObj.pop());
 		assertEquals(firstValue, stackObj.pop());
+		assertEquals(1, stackObj.reportRejected());
 	}
-
 }

@@ -9,6 +9,8 @@ import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 // Alt + → przelaczenie sie do nastepnego (w historii) edytowanego miejsca w kodzie (o ile takie istnieje)
 class StacksDemo {
 
+	private static final int STACK_CAPACITY = 12;
+
 	public static void main(String[] args) {
 		DefaultStacksFactory factory = new DefaultStacksFactory();
 
@@ -16,8 +18,8 @@ class StacksDemo {
 	}
 
 	private static void testStacks(DefaultStacksFactory factory) {
-		Stack[] stacks = { factory.getStandardStack(), factory.getFalseStack(), factory.getFifoStack(),
-				factory.getHanoiStack() };
+		Stack[] stacks = { factory.getStandardStack(STACK_CAPACITY), factory.getFalseStack(STACK_CAPACITY),
+				factory.getFifoStack(STACK_CAPACITY), factory.getHanoiStack(STACK_CAPACITY) };
 
 		for (int i = 1; i < 15; i++)
 			for (int j = 0; j < 3; j++)

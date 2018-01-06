@@ -4,11 +4,17 @@ public class Stack {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 
-	private static final int STACK_CAPACITY = 12;
-
-	private final int[] items = new int[STACK_CAPACITY];
+	private final int[] items;
 
 	private int total = EMPTY_STACK_VALUE;
+
+	private final int capacity;
+
+	public Stack(int capacity) {
+		this.capacity = capacity;
+		this.items = new int[capacity];
+		;
+	}
 
 	public void push(int i) {
 		if (!isFull())
@@ -20,7 +26,7 @@ public class Stack {
 	}
 
 	public boolean isFull() {
-		return total == STACK_CAPACITY - 1;
+		return total == capacity - 1;
 	}
 
 	public int top() {
@@ -34,7 +40,7 @@ public class Stack {
 			return EMPTY_STACK_VALUE;
 		return items[total--];
 	}
-	
+
 	public int getTotal() {
 		return total;
 	}
