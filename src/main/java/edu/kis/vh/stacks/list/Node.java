@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks.list;
 
-public class Node {
+class Node {
 
 	// W klasie StackList dostep do ponizszych zmiennych odbywa sie teraz poprzez
 	// gettery i settery, z wyjatkiem value, ktora jest tylko zwracana, nigdy nie modyfikowana.
