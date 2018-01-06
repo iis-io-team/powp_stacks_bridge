@@ -7,9 +7,9 @@ public class StackHanoi extends Stack {
 	public StackHanoi() {
 		super();
 	}
-	
-	public StackHanoi(int capacity) {
-		super(capacity);
+
+	public StackHanoi(StackArray stackArray) {
+		super(stackArray);
 	}
 
 	public int reportRejected() {

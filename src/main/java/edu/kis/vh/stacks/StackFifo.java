@@ -9,9 +9,9 @@ public class StackFifo extends Stack {
 		temp = new Stack();
 	}
 
-	public StackFifo(int capacity) {
-		super(capacity);
-		temp = new Stack(capacity);
+	public StackFifo(StackArray stackArray) {
+		super(stackArray);
+		temp = new Stack(stackArray);
 	}
 
 	@Override

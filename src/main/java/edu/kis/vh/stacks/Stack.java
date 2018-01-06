@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.list.StackList;
+
 /**
  * Represents the default Stack.
  * 
@@ -15,31 +17,29 @@ public class Stack {
 	public static final int DEFAULT_CAPACITY = 12;
 
 	/** The elements in stack. */
-	private final StackArray items;
+	private final StackArray stackArray;
+
+	private final StackList stackList;
 
 	/** The total number of elements in stack. */
 	private int total = EMPTY_STACK_VALUE;
-
-	/** The stacks capacity. */
-	private final int capacity;
 
 	/**
 	 * Create new instance of Stack with default capacity.
 	 */
 	public Stack() {
-		this.capacity = DEFAULT_CAPACITY;
-		this.items = new StackArray(DEFAULT_CAPACITY);
+		this.stackArray = new StackArray(DEFAULT_CAPACITY);
+		this.stackList = null;
 	}
 
-	/**
-	 * Creates new instance of Stack with given capacity.
-	 * 
-	 * @param capacity
-	 *            The max capacity of this stack.
-	 */
-	public Stack(int capacity) {
-		this.capacity = capacity;
-		this.items = new StackArray(capacity);
+	public Stack(StackArray stackArray) {
+		this.stackArray = stackArray;
+		this.stackList = null;
+	}
+
+	public Stack(StackList stackList) {
+		this.stackArray = null;
+		this.stackList = stackList;
 	}
 
 	/**
@@ -50,7 +50,11 @@ public class Stack {
 	 */
 	public void push(int i) {
 		if (!isFull()) {
-			items.set(i, ++total);
+			if (stackArray != null) {
+				stackArray.set(i, ++total);
+			} else {
+				stackList.pushElement(i);
+			}
 		}
 	}
 
@@ -65,7 +69,10 @@ public class Stack {
 	 * @return <code>true</code> if total number of items reached stack capacity.
 	 */
 	public boolean isFull() {
-		return total == capacity - 1;
+		if (stackArray != null) {
+			return total == stackArray.getCapacity() - 1;
+		}
+		return false;
 	}
 
 	/**
@@ -75,7 +82,10 @@ public class Stack {
 		if (isEmpty()) {
 			return EMPTY_STACK_VALUE;
 		}
-		return items.get(total);
+		if (stackArray != null) {
+			return stackArray.get(total);
+		}
+		return stackList.peek();
 	}
 
 	/**
@@ -86,7 +96,10 @@ public class Stack {
 		if (isEmpty()) {
 			return EMPTY_STACK_VALUE;
 		}
-		return items.get(total--);
+		if (stackArray != null) {
+			return stackArray.get(total--);
+		}
+		return stackList.pop();
 	}
 
 	/**
@@ -101,7 +114,7 @@ public class Stack {
 	 * @return The capacity of this stack.
 	 */
 	public int getCapacity() {
-		return capacity;
+		return stackArray.getCapacity();
 	}
 
 }

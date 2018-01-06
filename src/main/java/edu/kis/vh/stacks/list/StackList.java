@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks.list;
 
-class StackList {
+public class StackList {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	private Node last;
