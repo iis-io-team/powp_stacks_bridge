@@ -34,5 +34,9 @@ public class Stack {
 			return EMPTY_STACK_VALUE;
 		return items[total--];
 	}
+	
+	public int getTotal() {
+		return total;
+	}
 
 }
