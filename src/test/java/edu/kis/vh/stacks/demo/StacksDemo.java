@@ -5,6 +5,8 @@ import edu.kis.vh.stacks.stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 // Zle sformatowane wiersze: 20,21,22,24,25,26,27,28
+// Alt + ← powrot do poprzednio edytowanego miejsca w kodzie
+// Alt + → przelaczenie sie do nastepnego (w historii) edytowanego miejsca w kodzie (o ile takie istnieje)
 class StacksDemo {
 
 	public static void main(String[] args) {
