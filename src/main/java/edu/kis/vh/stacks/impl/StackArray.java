@@ -1,6 +1,7 @@
 package edu.kis.vh.stacks.impl;
 
 import edu.kis.vh.stacks.IStack;
+import edu.kis.vh.stacks.Stack;
 
 public class StackArray implements IStack {
 
@@ -9,6 +10,11 @@ public class StackArray implements IStack {
 	private int total = EMPTY_STACK_VALUE;
 
 	private final int capacity;
+
+	public StackArray() {
+		this.capacity = Stack.DEFAULT_CAPACITY;
+		this.items = new int[Stack.DEFAULT_CAPACITY];
+	}
 
 	public StackArray(int capacity) {
 		this.capacity = capacity;

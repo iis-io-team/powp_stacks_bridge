@@ -1,7 +1,5 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.impl.StackArray;
-
 public class StackHanoi extends Stack {
 
 	private int totalRejected = 0;
@@ -10,8 +8,8 @@ public class StackHanoi extends Stack {
 		super();
 	}
 
-	public StackHanoi(StackArray stackArray) {
-		super(stackArray);
+	public StackHanoi(IStack stack) {
+		super(stack);
 	}
 
 	public int reportRejected() {
