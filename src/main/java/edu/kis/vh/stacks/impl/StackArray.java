@@ -22,7 +22,7 @@ public class StackArray implements IStack {
 	@Override
 	public void push(int i) {
 		if (!isFull()) {
-			items[++total] = i;
+			items[total++] = i;
 		}
 	}
 
@@ -33,7 +33,7 @@ public class StackArray implements IStack {
 
 	@Override
 	public boolean isFull() {
-		return total == capacity - 1;
+		return total == capacity;
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class StackArray implements IStack {
 		if (isEmpty()) {
 			return EMPTY_STACK_VALUE;
 		}
-		return items[total];
+		return items[total - 1];
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class StackArray implements IStack {
 		if (isEmpty()) {
 			return EMPTY_STACK_VALUE;
 		}
-		return items[total--];
+		return items[--total];
 	}
 
 }

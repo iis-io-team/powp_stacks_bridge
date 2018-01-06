@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.kis.vh.stacks.IStack;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFifo;
 
@@ -51,10 +52,8 @@ public class StackFifoTest {
 
 	@Test
 	public void testTop() {
-		final int EMPTY_STACK_VALUE = -1;
-
 		int result = stackObj.top();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IStack.EMPTY_STACK_VALUE, result);
 
 		int testValue = 4;
 		stackObj.push(testValue);

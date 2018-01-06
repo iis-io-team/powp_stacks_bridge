@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import edu.kis.vh.stacks.IStack;
 import edu.kis.vh.stacks.Stack;
 
 public class StackTest {
@@ -50,10 +51,8 @@ public class StackTest {
 
 	@Test
 	public void testTop() {
-		final int EMPTY_STACK_VALUE = -1;
-
 		int result = stackObj.top();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IStack.EMPTY_STACK_VALUE, result);
 
 		int testValue = 4;
 		stackObj.push(testValue);
@@ -66,10 +65,8 @@ public class StackTest {
 
 	@Test
 	public void testPop() {
-		final int EMPTY_STACK_VALUE = -1;
-
 		int result = stackObj.pop();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IStack.EMPTY_STACK_VALUE, result);
 
 		int testValue = 4;
 		stackObj.push(testValue);
@@ -77,7 +74,7 @@ public class StackTest {
 		result = stackObj.pop();
 		Assert.assertEquals(testValue, result);
 		result = stackObj.pop();
-		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		Assert.assertEquals(IStack.EMPTY_STACK_VALUE, result);
 	}
 
 	@Test
