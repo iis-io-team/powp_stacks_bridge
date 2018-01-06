@@ -1,8 +1,8 @@
 package edu.kis.vh.stacks;
 
-public class StackFIFO extends stack {
+public class StackFifo extends Stack {
 
-	public stack temp = new stack();
+	public Stack temp = new Stack();
 
 	@Override
 	public int pop() {
