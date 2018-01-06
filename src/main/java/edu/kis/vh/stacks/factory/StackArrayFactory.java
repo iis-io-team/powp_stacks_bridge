@@ -1,30 +1,31 @@
 package edu.kis.vh.stacks.factory;
 
-import edu.kis.vh.stacks.factory.IStacksFactory;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.StackFifo;
 import edu.kis.vh.stacks.StackHanoi;
+import edu.kis.vh.stacks.impl.StackArray;
+import edu.kis.vh.stacks.impl.StackList;
 
-public class DefaultStacksFactory implements IStacksFactory {
+public class StackArrayFactory implements IStacksFactory {
 
 	@Override
 	public Stack getStandardStack() {
-		return new Stack();
+		return new Stack(new StackArray());
 	}
 
 	@Override
 	public Stack getFalseStack() {
-		return new Stack();
+		return new Stack(new StackList());
 	}
 
 	@Override
 	public StackFifo getFifoStack() {
-		return new StackFifo();
+		return new StackFifo(new StackArray());
 	}
 
 	@Override
 	public StackHanoi getHanoiStack() {
-		return new StackHanoi();
+		return new StackHanoi(new StackArray());
 	}
 
 }
