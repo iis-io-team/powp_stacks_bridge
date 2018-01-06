@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.impl.StackArray;
+
 public class StackHanoi extends Stack {
 
 	private int totalRejected = 0;

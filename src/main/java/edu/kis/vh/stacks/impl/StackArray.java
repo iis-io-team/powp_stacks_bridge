@@ -1,12 +1,12 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.impl;
 
-class StackArray implements IStack {
+import edu.kis.vh.stacks.IStack;
+
+public class StackArray implements IStack {
 
 	private final int items[];
 
 	private int total = EMPTY_STACK_VALUE;
-
-	public static final int EMPTY_STACK_VALUE = -1;
 
 	private final int capacity;
 

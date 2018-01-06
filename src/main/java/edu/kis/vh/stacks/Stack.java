@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.impl.StackArray;
+
 // Po refaktoryzacji zwiazanej z utworzeniem interfejsu IStack, klasa Stack przestala byc potrzebna.
 // Wyjatkiem jest domyslny konstruktor, ktory dostarcza nam implementacje klasy StackArray.
 

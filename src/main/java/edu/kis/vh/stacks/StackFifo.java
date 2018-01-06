@@ -1,5 +1,7 @@
 package edu.kis.vh.stacks;
 
+import edu.kis.vh.stacks.impl.StackArray;
+
 public class StackFifo extends Stack {
 
 	private final Stack temp;

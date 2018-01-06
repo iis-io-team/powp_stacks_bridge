@@ -1,10 +1,9 @@
-package edu.kis.vh.stacks.list;
+package edu.kis.vh.stacks.impl;
 
 import edu.kis.vh.stacks.IStack;
 
 public class StackList implements IStack {
 
-	private static final int EMPTY_STACK_VALUE = -1;
 	private Node last;
 
 	@Override
