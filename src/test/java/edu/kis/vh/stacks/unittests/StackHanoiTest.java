@@ -10,6 +10,8 @@ import edu.kis.vh.stacks.StackHanoi;
 
 public class StackHanoiTest {
 
+	private final int STACK_CAPACITY = 12;
+	
 	private StackHanoi stackObj = null;
 
 	@Before
@@ -38,7 +40,7 @@ public class StackHanoiTest {
 
 	@Test
 	public void testIsFull() {
-		for (int i = 0; i < stackObj.getCapacity(); i++) {
+		for (int i = 0; i < STACK_CAPACITY; i++) {
 			boolean result = stackObj.isFull();
 			Assert.assertEquals(false, result);
 			stackObj.push(888);
